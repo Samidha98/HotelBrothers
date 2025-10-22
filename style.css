@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #f5e6d3;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Camera container */
+#scanner-container {
+  position: relative;
+  width: 70%;
+  height: 70vh;
+  margin: auto;
+  border: 3px solid #444;
+  border-radius: 10px;
+  overflow: hidden;
+  background-image: url("./images/sample_image.jpg");
+  background-repeat: no-repeat; /* Added: Prevents the image from repeating */
+  background-size: cover; /* Added: Ensures the image covers the entire container */
+  background-position: center; /* Added: Centers the image within the container */
+}
+
+#reader {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative; /* For scan line positioning */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes scanMove {
+  0% {
+    top: calc(50% - 200px);
+  } /* start at top of box */
+  50% {
+    top: calc(50% + 200px);
+  } /* move to bottom of box */
+  100% {
+    top: calc(50% - 200px);
+  }
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#startBtn {
+  background-color: #4caf50;
+  color: white;
+}
+
+#stopBtn {
+  background-color: #f44336;
+  color: white;
+}
